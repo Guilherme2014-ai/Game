@@ -1,0 +1,19 @@
+canvas{
+    position: absolute;
+    margin: auto;
+    right: 0px;
+    left: 0px;
+    top: 20px;
+    border: solid black 1px;
+    box-shadow: black 1px 1px 5px;
+}
+#score{
+    padding: 1%;
+    overflow: scroll;
+    width: 170px;
+    height: 200px;
+    border: solid black 2px;
+    border-radius: 2px;
+    box-shadow: black 0px 0px 5px;
+    background: rgb(158, 150, 150);
+}

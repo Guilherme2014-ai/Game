@@ -1,4 +1,4 @@
-const PORT = 8089 || process.env.PORT;
+const PORT = process.env.PORT || 8089;
 const app = require('./config/server');
 
 // IO:

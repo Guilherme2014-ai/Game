@@ -92,21 +92,7 @@ var obs = {
     },
 
     physics: function() {
-        this._obs.forEach(obs => {
-            const bottomP = (player.y+player.height)
-            const playerX = player.x
-            const obsY = (ground.y-obs.height)
-            const obsFt = obs.x+obs.width
-            const obsX = obs.x
-
-            const frontplayer = (player.x + player.width)
-
-            if(bottomP < obsY-3 && bottomP > obsY+3 && (frontplayer > obsX && frontplayer < obsFt) || (playerX > obsX && playerX < obsFt)) {
-                player.y = obsY-player.height
-            }
-
-            obs.x -= this.speed
-        })
+        obs.x -= this.speed
     },
 
     draw: function() {

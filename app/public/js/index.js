@@ -77,6 +77,8 @@ var obs = {
 
     collision: function() {
         this._obs.forEach(obs => {
+            obs.x -= this.speed
+
             const topP = player.y
             const bottomP = player.y+player.height
             const frontplayer = player.x+player.width
@@ -89,10 +91,6 @@ var obs = {
                 this.gameOver()
             }
         });
-    },
-
-    physics: function() {
-        obs.x -= this.speed
     },
 
     draw: function() {
@@ -157,7 +155,6 @@ setInterval(() => {
 
         player.physics()
         obs.collision()
-        obs.physics()
     }
 
     function draw() {

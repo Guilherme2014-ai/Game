@@ -31,11 +31,14 @@ Routes.get('/', (req, res) => {
             })
         })
     })
-    
 })
 
-Routes.get('/register', (req, res) => {
-    
+Routes.get('/placar', (req, res) => {
+    players.find().then((player) => {
+        res.render('placar', {player: player})
+    }).catch((err) => {
+        console.log(err)
+    })
 })
 
 module.exports = Routes;

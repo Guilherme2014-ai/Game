@@ -8,13 +8,15 @@
     <title>Game</title>
 </head>
 <body style="background-image: url(https://media.istockphoto.com/photos/futuristic-scifi-concrete-room-with-glowing-neon-virtual-reality-picture-id1174871534?k=6&m=1174871534&s=612x612&w=0&h=RG-PSOQOYfY3n0_UDX3pg0IfQ0o_CYe0T33Gmp2AtQA=); background-size: 1500px;">
-    <div name="score" id="score">
-        <h2>Placar:</h2>
-        <% score.forEach(player => { %>
-            <p><strong><%= player.name %></strong></p>
-            <p><%= player.score %>  Pt's</p><hr>
-        <% }) %> 
-    </div>
+    <a href="/placar">
+        <div name="score" id="score">
+            <h2 style="font-style: normal;">Placar:</h2>
+            <% score.forEach(player => { %>
+                <p><strong><%= player.name %></strong></p>
+                <p><%= player.score %>  Pt's</p><hr>
+            <% }) %> 
+        </div>
+    </a>
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/index.js"></script>

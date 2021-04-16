@@ -12,6 +12,9 @@ Routes.get('/404', (res, req) => {
 
 Routes.get('/', (req, res) => {
     players.find().sort({score: 'desc'}).then((score) => {
+        if (score > 5) {
+            players.deleteMany()
+        }
         res.render('home', {score: score})
     }).catch((err) => {
         console.log(err)

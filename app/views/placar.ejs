@@ -7,10 +7,12 @@
     <title>Placar</title>
 </head>
 <body>
-    <h1>Placar</h1><hr><br><br> <input type="hidden" name="update">
-    <% player.forEach(player => { %>
+    <h1>Placar</h1><hr><br><br>
+    <% for(player of player){ %>
+
         <div style="border: solid black 1px; padding: 1%;"><h3><strong><%= player.name %></strong></h3>
         <p><%= player.score %></p></div><br>
-   <% }) %> 
+
+    <% } %>  
 </body>
 </html>

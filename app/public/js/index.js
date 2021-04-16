@@ -1,4 +1,5 @@
 var socket = io()
+//====================================================
 
 var nameP = String(window.prompt('Qual Seu Nome ?'))
 

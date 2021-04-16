@@ -1,4 +1,5 @@
 const app = require('../../config/server')
+const io = app.get('io')
 
 const Routes = require('express').Router()
 const mongoose = require('mongoose')
@@ -20,7 +21,7 @@ Routes.get('/', (req, res) => {
         console.log(err)
     })
 
-    app.get('io').on('connection', (socket) => {
+    io.on('connection', (socket) => {
         socket.on('gameover', (player) => {
             const Newplayer = {
                 name: player.name,

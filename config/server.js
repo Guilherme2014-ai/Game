@@ -7,7 +7,7 @@ app.set('view engine', 'ejs')
 app.set('views', './app/views')
 
 app.use(express.static('./app/public'))
-mongoose.connect('mongodb+srv://game:game@game.tzyzk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost:27017/game', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
